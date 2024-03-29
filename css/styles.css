@@ -35,22 +35,24 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%; /* Adjusted padding */
-  background-color: #00040F;
+  background-color: #fff;
+  /* #00040F */
+  color: #00040F;
 }
 
 .logo img {
-  width: 90px; /* Adjust logo size */
+  width: 80px; /* Adjust logo size */
   border-radius: 20px;
   padding: 2px;
 
 }
 .logo:hover{
-  background-color: #00040F;
   transform: scale(1.1); 
 }
 .nav__links {
   list-style: none;
   display: flex;
+  color: #000;
 }
 
 .nav__links li {
@@ -60,15 +62,16 @@ header {
 .nav__links a,
 .cta,
 .overlay__content a {
-  color: #edf0f1;
+  color: #000;
   text-decoration: none;
-  font-size: 18px; /* Adjust font size */
-  font-weight: 500;
+  font-size: 20px; /* Adjust font size */
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
 .nav__links a:hover {
-  color: rgb(172, 172, 170);
+  color: rgb(62, 62, 65);
+  font-size: 21px;
 }
 
 .cta {
@@ -252,7 +255,6 @@ header {
 }
 
 .img3:hover img {
-  transform: scale(1.1); /* Scale up image on hover */
   cursor: pointer;
 }
 
@@ -296,9 +298,23 @@ header {
 
 
 /* Contact section styles */
+.contact p {
+  font-size: 20px; /* Increased font size for paragraphs */
+  color: #666; /* Slightly darker text color */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+
+}
+
+.contact p:last-child {
+  margin-top: 20px; /* Additional margin for better separation */
+}
 .contact {
   text-align: center;
   margin-top: 50px; /* Adjust margin */
+  border-radius: 10px; /* Rounded corners */
+  
   
 }
 
@@ -431,9 +447,14 @@ footer {
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
+.partner-logos img {
+  width: 70px; /* Adjust this value as needed */
+  height: 70px; /* Adjust this value as needed */
+  margin: 5px; /* Adjust this value as needed to add space between images */
+}
 
 .partner-logos img:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .copyright {
@@ -686,60 +707,6 @@ footer {
 }
 
 
-/* For mobile phones */
-@media screen and (max-width: 480px) {
-  .logo img {
-    width: 70px; /* Adjust logo size for smaller screens */
-    border-radius: 10px; /* Adjust logo border radius */
-  }
-
-  .nav__links li {
-    margin-right: 10px; /* Adjust spacing between nav links */
-  }
-
-  .cta {
-    padding: 8px 16px; /* Adjust button padding */
-    border-radius: 20px; /* Adjust button border radius */
-    font-size: 16px; /* Adjust font size */
-  }
-
-  .get-started-button {
-    padding: 12px 24px; /* Adjust button padding */
-    font-size: 16px; /* Adjust font size */
-  }
-
-  .about h1 {
-    font-size: 28px; /* Adjust font size */
-  }
-
-  .about p {
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5;
-  }
-
-  .service h1 {
-    font-size: 28px; /* Adjust font size */
-  }
-
-  .service p {
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5;
-  }
-
-  .contact .heading {
-    font-size: 28px; /* Adjust font size */
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; /* Adjust input width */
-  }
-
-  .contact-form-btn {
-    width: 100%; /* Adjust button width */
-    font-size: 16px; /* Adjust font size */
-  }
-}
 
 /* For desktop screens */
 @media screen and (min-width: 1025px) {
@@ -805,5 +772,57 @@ footer {
   .cta {
     display: block; /* Ensure call to action button is displayed */
     margin-top: 20px; /* Adjust margin */
+  }
+}
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 20px 10px; /* Adjusted padding */
+  }
+
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav__links li {
+    margin: 10px 0;
+  }
+
+  .cta {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .contact {
+    margin-top: 30px;
+  }
+
+  .contact-map iframe {
+    height: 250px; /* Adjust map height for mobile view */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(100% - 30px); /* Adjust input width */
+    margin-right: 15px; /* Add margin for better spacing */
+  }
+
+  .contact-form-btn {
+    width: calc(100% - 30px); /* Adjust button width */
+    margin-right: 15px; /* Add margin for better spacing */
+  }
+
+  .logo img {
+    display: block;
+    margin: 10px auto; /* Center align logo */
+    width: 90px; /* Adjust logo size */
+    border-radius: 20px;
+  }
+
+  .nav__links, .cta {
+    margin-top: 10px;
   }
 }
